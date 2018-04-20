@@ -93,7 +93,7 @@ public final class EDSAC
 	//####################                                    ####################
 	//############################################################################
 	/**
-	 * Handles ENIAC Assembly code commands.
+	 * Handles EDSAC Assembly code commands.
 	 *
 	 * @param inst
 	 */

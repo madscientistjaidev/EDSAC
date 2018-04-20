@@ -614,6 +614,7 @@ public final class EDSAC
 		out.println("\tem <start> <end>\t\tExamine range of locations");
 		out.println("\tex\t\t\t\tExit simulator");
 		out.println("\the\t\t\t\tPrint Help");
+		out.println("\tli\t\t\t\tShow license information");
 		out.println("\tlm <filename>\t\t\tLoad memory map from file");
 		out.println("\tlp <filename>\t\t\tLoad program from file");
 		out.println("\tls <filename>\t\t\tLoad script from file");
@@ -624,7 +625,6 @@ public final class EDSAC
 		out.println("\trp\t\t\t\tRun program");
 		out.println("\trs\t\t\t\tRun script");
 		out.println("\tsm <location> <value>\t\tSet value of location");
-		out.println("\tli\t\t\t\tShow license information");
 	}
 
 	/**

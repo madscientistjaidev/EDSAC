@@ -10,7 +10,7 @@ import static java.lang.System.out;
  *
  * @author Mad Scientist
  */
-public class EDSAC
+public final class EDSAC
 {
 	/**
 	 * Memory

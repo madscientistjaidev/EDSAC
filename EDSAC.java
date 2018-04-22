@@ -578,9 +578,24 @@ public final class EDSAC
 			return;
 		}
 
-		int loc = Integer.parseInt(inst[1]);
-
-		System.out.println("\t" + loc + " : " + memory.get(loc));
+		if(inst[1]=="a") System.out.println("\tAcc : " + accumulator);
+		else if(inst[1]=="m") System.out.println("\tAcc : " + multiplier);
+		else
+		{
+			int loc = 0;
+			try
+			{
+				loc = Integer.parseInt(inst[1]);
+			}
+			
+			catch(NumberFormatException e)
+			{
+				out.println("Bad argument : " + inst[1]);
+				return;
+			}
+			
+			System.out.println("\t" + loc + " : " + memory.get(loc));
+		}
 	}
 
 	void em(String[] inst)

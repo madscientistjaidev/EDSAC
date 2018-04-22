@@ -611,7 +611,7 @@ public final class EDSAC
 		out.println("\tdm <filename>\t\t\tDump memory to file");
 		out.println("\tee\t\t\t\tExamine execution trace");
 		out.println("\tel <location>\t\t\tExamine memory location");
-		out.println("\tem <start> <end>\t\tExamine range of locations");
+		out.println("\ter <start> <end>\t\tExamine range of locations");
 		out.println("\tex\t\t\t\tExit simulator");
 		out.println("\the\t\t\t\tPrint Help");
 		out.println("\tli\t\t\t\tShow license information");

@@ -631,6 +631,18 @@ public final class EDSAC
 			out.println("Bad argument : " + inst[2]);
 			return;
 		}
+		
+		if (start < 0 || start > 1023)
+		{
+			out.println("Address out of bounds :" + start);
+			return;
+		}
+		
+		if (end < 0 || end > 1023)
+		{
+			out.println("Address out of bounds :" + end);
+			return;
+		}
 
 		for (int i = start; i <= end; i++)
 			System.out.println("\t" + i + " : " + memory.get(i));

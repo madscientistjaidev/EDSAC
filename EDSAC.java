@@ -467,8 +467,8 @@ public final class EDSAC
 			case "el":
 				el(inst);
 				break;
-			case "em":
-				em(inst);
+			case "er":
+				er(inst);
 				break;
 			case "ex":
 				System.out.println("Exiting...");
@@ -598,7 +598,7 @@ public final class EDSAC
 		}
 	}
 
-	void em(String[] inst)
+	void er(String[] inst)
 	{
 		if (inst.length != 3)
 		{

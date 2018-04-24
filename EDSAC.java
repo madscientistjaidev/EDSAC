@@ -15,7 +15,7 @@ public final class EDSAC
 	/**
 	 * Memory
 	 */
-	ArrayList<Long> memory;
+	ArrayList<Long> mem;
 
 	/**
 	 * Input tape
@@ -188,7 +188,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator += memory.get(n);
+		accumulator += mem.get(n);
 	}
 
 	void A(long n)
@@ -199,7 +199,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator += memory.get((int) n);
+		accumulator += mem.get((int) n);
 	}
 
 	/**
@@ -214,7 +214,7 @@ public final class EDSAC
 			out.println("Address out of bounds :" + n);
 			return;
 		}
-		accumulator -= memory.get(n);
+		accumulator -= mem.get(n);
 	}
 
 	void S(long n)
@@ -225,7 +225,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator -= memory.get((int) n);
+		accumulator -= mem.get((int) n);
 	}
 
 	/**
@@ -241,7 +241,7 @@ public final class EDSAC
 			return;
 		}
 
-		multiplier = memory.get(n);
+		multiplier = mem.get(n);
 	}
 
 	/**
@@ -258,7 +258,7 @@ public final class EDSAC
 			return;
 		}
 
-		A(memory.get(n) * multiplier);
+		A(mem.get(n) * multiplier);
 	}
 
 	/**
@@ -275,7 +275,7 @@ public final class EDSAC
 			return;
 		}
 
-		S(memory.get(n) * multiplier);
+		S(mem.get(n) * multiplier);
 	}
 
 	/**
@@ -291,7 +291,7 @@ public final class EDSAC
 			return;
 		}
 
-		memory.set(n, accumulator);
+		mem.set(n, accumulator);
 		accumulator = 0l;
 	}
 
@@ -308,7 +308,7 @@ public final class EDSAC
 			return;
 		}
 
-		memory.set(n, accumulator);
+		mem.set(n, accumulator);
 	}
 
 	/**
@@ -325,7 +325,7 @@ public final class EDSAC
 			return;
 		}
 
-		A(memory.get(n) & multiplier);
+		A(mem.get(n) & multiplier);
 	}
 
 	/**
@@ -399,7 +399,7 @@ public final class EDSAC
 			return;
 		}
 
-		memory.set(n, 0l);
+		mem.set(n, 0l);
 	}
 
 	/**
@@ -415,7 +415,7 @@ public final class EDSAC
 			return;
 		}
 
-		out.println(memory.get(n));
+		out.println(mem.get(n));
 	}
 
 	/**
@@ -431,7 +431,7 @@ public final class EDSAC
 			return;
 		}
 
-		memory.set(n, 0l);
+		mem.set(n, 0l);
 	}
 
 	//############################################################################
@@ -516,9 +516,9 @@ public final class EDSAC
 	 */
 	void cm()
 	{
-		memory = new ArrayList<>();
+		mem = new ArrayList<>();
 		for (int i = 0; i < MEM_SIZE; i++)
-			memory.add(0l);
+			mem.add(0l);
 	}
 
 	/**
@@ -557,7 +557,7 @@ public final class EDSAC
 			{
 				op += i;
 				op += " ";
-				op += memory.get(i);
+				op += mem.get(i);
 				op += "\n";
 			}
 
@@ -594,7 +594,7 @@ public final class EDSAC
 				return;
 			}
 			
-			System.out.println("\t" + loc + " : " + memory.get(loc));
+			System.out.println("\t" + loc + " : " + mem.get(loc));
 		}
 	}
 
@@ -631,7 +631,7 @@ public final class EDSAC
 			out.println("Bad argument : " + inst[2]);
 			return;
 		}
-		
+				
 		if (start < 0 || start > 1023)
 		{
 			out.println("Address out of bounds :" + start);
@@ -645,7 +645,7 @@ public final class EDSAC
 		}
 
 		for (int i = start; i <= end; i++)
-			System.out.println("\t" + i + " : " + memory.get(i));
+			System.out.println("\t" + i + " : " + mem.get(i));
 	}
 
 	/**
@@ -722,7 +722,7 @@ public final class EDSAC
 
 			memLoc = line.split(" ");
 			if (memLoc.length == 2)
-				memory.set(Integer.parseInt(memLoc[0]), Long.parseLong(memLoc[1]));
+				mem.set(Integer.parseInt(memLoc[0]), Long.parseLong(memLoc[1]));
 		}
 	}
 

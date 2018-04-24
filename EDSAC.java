@@ -606,8 +606,31 @@ public final class EDSAC
 			return;
 		}
 
-		int start = Integer.parseInt(inst[1]);
-		int end = Integer.parseInt(inst[2]);
+		int start = 0;
+
+		try
+		{
+			start = Integer.parseInt(inst[1]);
+		}
+		
+		catch (NumberFormatException e)
+		{
+			out.println("Bad argument : " + inst[1]);
+			return;
+		}
+		
+		int end = 0;
+
+		try
+		{
+			end = Integer.parseInt(inst[2]);
+		}
+		
+		catch (NumberFormatException e)
+		{
+			out.println("Bad argument : " + inst[2]);
+			return;
+		}
 
 		for (int i = start; i <= end; i++)
 			System.out.println("\t" + i + " : " + memory.get(i));

@@ -529,6 +529,10 @@ public final class EDSAC
 		program = new ArrayList<>();
 	}
 
+	/**
+	 * Dump memory to file.
+	 * @param inst 
+	 */
 	void dm(String[] inst)
 	{
 		if (inst.length != 2)
@@ -570,6 +574,10 @@ public final class EDSAC
 		}
 	}
 
+	/**
+	 * Examine memory location.
+	 * @param inst 
+	 */
 	void el(String[] inst)
 	{
 		if (inst.length != 2)
@@ -598,6 +606,10 @@ public final class EDSAC
 		}
 	}
 
+	/**
+	 * Examine range of locations.
+	 * @param inst 
+	 */
 	void er(String[] inst)
 	{
 		if (inst.length != 3)

@@ -789,6 +789,10 @@ public final class EDSAC
 		}
 	}
 
+	/**
+	 * Set Prompt.
+	 * @param inst 
+	 */
 	void pr(String[] inst)
 	{
 		if (inst.length != 2)
@@ -800,6 +804,10 @@ public final class EDSAC
 		prompt = inst[1];
 	}
 
+	/**
+	 * Run command.
+	 * @param inst 
+	 */
 	void rc(String[] inst)
 	{
 		if (program.isEmpty())
@@ -814,6 +822,9 @@ public final class EDSAC
 		});
 	}
 
+	/**
+	 * Run program.
+	 */
 	void rp()
 	{
 		if (program.isEmpty())

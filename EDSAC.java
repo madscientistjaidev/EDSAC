@@ -33,7 +33,7 @@ public final class EDSAC
 	final int MEM_SIZE = 1024;
 
 	long accumulator;
-	long multiplier;
+	long mult;
 
 	long headPos = 0;
 
@@ -241,7 +241,7 @@ public final class EDSAC
 			return;
 		}
 
-		multiplier = mem.get(n);
+		mult = mem.get(n);
 	}
 
 	/**
@@ -258,7 +258,7 @@ public final class EDSAC
 			return;
 		}
 
-		A(mem.get(n) * multiplier);
+		A(mem.get(n) * mult);
 	}
 
 	/**
@@ -275,7 +275,7 @@ public final class EDSAC
 			return;
 		}
 
-		S(mem.get(n) * multiplier);
+		S(mem.get(n) * mult);
 	}
 
 	/**
@@ -325,7 +325,7 @@ public final class EDSAC
 			return;
 		}
 
-		A(mem.get(n) & multiplier);
+		A(mem.get(n) & mult);
 	}
 
 	/**
@@ -587,7 +587,7 @@ public final class EDSAC
 		}
 
 		if(inst[1]=="a") System.out.println("\tAcc : " + accumulator);
-		else if(inst[1]=="m") System.out.println("\tAcc : " + multiplier);
+		else if(inst[1]=="m") System.out.println("\tAcc : " + mult);
 		else
 		{
 			int loc = 0;

@@ -1,3 +1,5 @@
+package CST680;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -32,7 +34,7 @@ public final class EDSAC
 	 */
 	final int MEM_SIZE = 1024;
 
-	long accumulator;
+	long acc;
 	long mult;
 
 	long headPos = 0;
@@ -188,7 +190,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator += mem.get(n);
+		acc += mem.get(n);
 	}
 
 	void A(long n)
@@ -199,7 +201,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator += mem.get((int) n);
+		acc += mem.get((int) n);
 	}
 
 	/**
@@ -214,7 +216,7 @@ public final class EDSAC
 			out.println("Address out of bounds :" + n);
 			return;
 		}
-		accumulator -= mem.get(n);
+		acc -= mem.get(n);
 	}
 
 	void S(long n)
@@ -225,7 +227,7 @@ public final class EDSAC
 			return;
 		}
 
-		accumulator -= mem.get((int) n);
+		acc -= mem.get((int) n);
 	}
 
 	/**
@@ -291,8 +293,8 @@ public final class EDSAC
 			return;
 		}
 
-		mem.set(n, accumulator);
-		accumulator = 0l;
+		mem.set(n, acc);
+		acc = 0l;
 	}
 
 	/**
@@ -308,7 +310,7 @@ public final class EDSAC
 			return;
 		}
 
-		mem.set(n, accumulator);
+		mem.set(n, acc);
 	}
 
 	/**
@@ -335,7 +337,7 @@ public final class EDSAC
 	 */
 	void R(int n)
 	{
-		accumulator >>= n;
+		acc >>= n;
 	}
 
 	/**
@@ -345,7 +347,7 @@ public final class EDSAC
 	 */
 	void L(int n)
 	{
-		accumulator <<= n;
+		acc <<= n;
 	}
 
 	/**
@@ -361,7 +363,7 @@ public final class EDSAC
 			return;
 		}
 
-		if (accumulator >= 0l)
+		if (acc >= 0l)
 			headPos = n;
 		else if (headPos != 1023)
 			headPos++;
@@ -380,7 +382,7 @@ public final class EDSAC
 			return;
 		}
 
-		if (accumulator < 0l)
+		if (acc < 0l)
 			headPos = n;
 		else if (headPos != 1023)
 			headPos++;
@@ -586,7 +588,7 @@ public final class EDSAC
 			return;
 		}
 
-		if(inst[1]=="a") System.out.println("\tAcc : " + accumulator);
+		if(inst[1]=="a") System.out.println("\tAcc : " + acc);
 		else if(inst[1]=="m") System.out.println("\tAcc : " + mult);
 		else
 		{

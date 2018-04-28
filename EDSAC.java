@@ -47,7 +47,7 @@ public final class EDSAC
 	/**
 	 * Holds program
 	 */
-	ArrayList<String> program;
+	ArrayList<String> prg;
 
 	boolean isRunning;
 
@@ -544,7 +544,7 @@ public final class EDSAC
 	 */
 	void cp()
 	{
-		program = new ArrayList<>();
+		prg = new ArrayList<>();
 	}
 
 	/**
@@ -803,7 +803,7 @@ public final class EDSAC
 
 			memLoc = line.split(" ");
 			if (memLoc.length != 0)
-				program.add(line);
+				prg.add(line);
 		}
 	}
 
@@ -828,13 +828,13 @@ public final class EDSAC
 	 */
 	void rc(String[] inst)
 	{
-		if (program.isEmpty())
+		if (prg.isEmpty())
 		{
 			System.out.println("No program loaded.");
 			return;
 		}
 
-		program.forEach((String i) ->
+		prg.forEach((String i) ->
 		{
 			instHandler(i.split(" "));
 		});
@@ -845,13 +845,13 @@ public final class EDSAC
 	 */
 	void rp()
 	{
-		if (program.isEmpty())
+		if (prg.isEmpty())
 		{
 			System.out.println("No program loaded.");
 			return;
 		}
 
-		program.forEach((String i) ->
+		prg.forEach((String i) ->
 		{
 			instHandler(i.split(" "));
 		});

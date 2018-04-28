@@ -1,5 +1,3 @@
-package CST680;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -177,6 +175,13 @@ public final class EDSAC
 		}
 	}
 
+	/**
+	 * Checks if address is within memory bounds.
+	 * @param n
+	 * @return 
+	 */
+	boolean validAddress(int n) {return (n < 0 || n > 1023);}
+	
 	/**
 	 * Add the number in storage location n into the accumulator.
 	 *

@@ -512,7 +512,9 @@ public final class EDSAC
 				break;
 			//out.println("\trs\t\t\tRun script");
 			//out.println("\tsc <filename>\t\tLoad script from file");
-			//out.println("\tsm <location> <value>\tSet value of location");
+			case "sm":
+				sm(inst);
+				break;
 
 			default:
 				out.println("Unknown command:" + inst[0]);

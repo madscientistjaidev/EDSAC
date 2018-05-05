@@ -705,6 +705,7 @@ public final class EDSAC
 		out.println("\trp\t\t\t\tRun program");
 		out.println("\trs\t\t\t\tRun script");
 		out.println("\tsm <location> <value>\t\tSet value of location");
+		out.println("\tsr <register> <value>\t\tSet value of register");
 	}
 
 	/**

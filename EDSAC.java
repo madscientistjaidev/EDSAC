@@ -1,5 +1,3 @@
-package CST680;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -855,5 +853,49 @@ public final class EDSAC
 		{
 			instHandler(i.split(" "));
 		});
+	}
+	
+	/**
+	 * Set value of location.
+	 * @param inst 
+	 */
+	void sm(String inst[])
+	{
+		if (inst.length != 3)
+		{
+			System.out.println("Wrong number of arguments.");
+			return;
+		}
+		
+		int val = 0;
+		try
+		{
+			val = Integer.parseInt(inst[2]);
+		}
+
+		catch(NumberFormatException e)
+		{
+			out.println("Bad argument : " + inst[2]);
+			return;
+		}
+
+		if(inst[1]=="a") acc = val;
+		else if(inst[1]=="m") mult = val;
+		else
+		{
+			int loc = 0;
+			try
+			{
+				loc = Integer.parseInt(inst[1]);
+			}
+			
+			catch(NumberFormatException e)
+			{
+				out.println("Bad argument : " + inst[1]);
+				return;
+			}
+			
+			mem[loc] = val;
+		}
 	}
 }

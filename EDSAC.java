@@ -881,23 +881,18 @@ public final class EDSAC
 			return;
 		}
 
-		if(inst[1]=="a") acc = val;
-		else if(inst[1]=="m") mult = val;
-		else
+		int loc = 0;
+		try
 		{
-			int loc = 0;
-			try
-			{
-				loc = Integer.parseInt(inst[1]);
-			}
-			
-			catch(NumberFormatException e)
-			{
-				out.println("Bad argument : " + inst[1]);
-				return;
-			}
-			
-			mem[loc] = val;
+			loc = Integer.parseInt(inst[1]);
 		}
+
+		catch(NumberFormatException e)
+		{
+			out.println("Bad argument : " + inst[1]);
+			return;
+		}
+
+		mem[loc] = val;
 	}
 }

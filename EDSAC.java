@@ -897,6 +897,10 @@ public final class EDSAC
 		mem[loc] = val;
 	}
 	
+	/**
+	 * Sets value of register.
+	 * @param inst 
+	 */
 	void sr(String inst[])
 	{
 		if (inst.length != 3)

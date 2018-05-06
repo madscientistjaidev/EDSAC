@@ -487,7 +487,7 @@ public final class EDSAC
 				er(inst);
 				break;
 			case "ex":
-				System.out.println("Exiting...");
+				out.println("Exiting...");
 				System.exit(0);
 			case "he":
 				he();
@@ -604,12 +604,12 @@ public final class EDSAC
 	{
 		if (inst.length != 2)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 
-		if(inst[1]=="a") System.out.println("\tAcc : " + acc);
-		else if(inst[1]=="m") System.out.println("\tAcc : " + mult);
+		if(inst[1]=="a") out.println("\tAcc : " + acc);
+		else if(inst[1]=="m") out.println("\tAcc : " + mult);
 		else
 		{
 			int loc = 0;
@@ -624,7 +624,7 @@ public final class EDSAC
 				return;
 			}
 			
-			System.out.println("\t" + loc + " : " + mem[loc]);
+			out.println("\t" + loc + " : " + mem[loc]);
 		}
 	}
 
@@ -636,7 +636,7 @@ public final class EDSAC
 	{
 		if (inst.length != 3)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 
@@ -679,7 +679,7 @@ public final class EDSAC
 		}
 
 		for (int i = start; i <= end; i++)
-			System.out.println("\t" + i + " : " + mem[i]);
+			out.println("\t" + i + " : " + mem[i]);
 	}
 
 	/**
@@ -722,7 +722,7 @@ public final class EDSAC
 	{
 		if (inst.length != 2)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 
@@ -730,7 +730,7 @@ public final class EDSAC
 
 		if (!memFile.canRead() || !memFile.exists() || !memFile.isFile())
 		{
-			System.out.println("Could not open file.");
+			out.println("Could not open file.");
 			return;
 		}
 
@@ -741,7 +741,7 @@ public final class EDSAC
 			memReader = new Scanner(memFile);
 		} catch (FileNotFoundException e)
 		{
-			System.out.println("Could not open file.");
+			out.println("Could not open file.");
 			return;
 		}
 
@@ -771,7 +771,7 @@ public final class EDSAC
 	{
 		if (inst.length != 2)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 
@@ -779,7 +779,7 @@ public final class EDSAC
 
 		if (!progFile.canRead() || !progFile.exists() || !progFile.isFile())
 		{
-			System.out.println("Could not open file.");
+			out.println("Could not open file.");
 			return;
 		}
 
@@ -790,7 +790,7 @@ public final class EDSAC
 			progReader = new Scanner(progFile);
 		} catch (FileNotFoundException e)
 		{
-			System.out.println("Could not open file.");
+			out.println("Could not open file.");
 			return;
 		}
 
@@ -820,7 +820,7 @@ public final class EDSAC
 	{
 		if (inst.length != 2)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 
@@ -835,7 +835,7 @@ public final class EDSAC
 	{
 		if (prg.isEmpty())
 		{
-			System.out.println("No program loaded.");
+			out.println("No program loaded.");
 			return;
 		}
 
@@ -852,7 +852,7 @@ public final class EDSAC
 	{
 		if (prg.isEmpty())
 		{
-			System.out.println("No program loaded.");
+			out.println("No program loaded.");
 			return;
 		}
 
@@ -870,7 +870,7 @@ public final class EDSAC
 	{
 		if (inst.length != 3)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 		
@@ -909,7 +909,7 @@ public final class EDSAC
 	{
 		if (inst.length != 3)
 		{
-			System.out.println("Wrong number of arguments.");
+			out.println("Wrong number of arguments.");
 			return;
 		}
 		

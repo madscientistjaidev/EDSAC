@@ -896,4 +896,34 @@ public final class EDSAC
 
 		mem[loc] = val;
 	}
+	
+	void sr(String inst[])
+	{
+		if (inst.length != 3)
+		{
+			System.out.println("Wrong number of arguments.");
+			return;
+		}
+		
+		int val = 0;
+		try
+		{
+			val = Integer.parseInt(inst[2]);
+		}
+
+		catch(NumberFormatException e)
+		{
+			out.println("Bad argument : " + inst[2]);
+			return;
+		}
+		
+		if(inst[1]=="a")
+			acc = val;
+		
+		else if(inst[1]=="m")
+			mult = val;
+		
+		else
+			out.println("Undefined register: " + inst[1]);
+	}
 }

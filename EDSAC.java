@@ -515,6 +515,10 @@ public final class EDSAC
 			case "sm":
 				sm(inst);
 				break;
+				
+			case "smr":
+				sr(inst);
+				break;
 
 			default:
 				out.println("Unknown command:" + inst[0]);

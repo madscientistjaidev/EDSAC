@@ -192,6 +192,22 @@ public final class EDSAC
 	}
 	
 	/**
+	 * Checks if address is within memory bounds.
+	 * @param n
+	 * @return 
+	 */
+	boolean validAddress(long n)
+	{
+		if (n < 0l || n > 1023l)
+		{
+			out.println("Address out of bounds :" + n);
+			return false;
+		}
+		
+		return true;
+	}
+	
+	/**
 	 * Add the number in storage location n into the accumulator.
 	 *
 	 * @param n

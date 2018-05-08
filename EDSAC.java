@@ -212,40 +212,25 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void A(int n)
-	{
-		if(validAddress(n)) acc += mem[n];
-	}
+	void A(int n) {if(validAddress(n)) acc += mem[n];}
 
-	void A(long n)
-	{
-		if(validAddress(n)) acc += mem[(int) n];
-	}
+	void A(long n) {if(validAddress(n)) acc += mem[(int) n];}
 
 	/**
 	 * Subtract the number in storage location n from the accumulator.
 	 *
 	 * @param n
 	 */
-	void S(int n)
-	{
-		if(validAddress(n)) acc -= mem[n];
-	}
+	void S(int n) {if(validAddress(n)) acc -= mem[n];}
 
-	void S(long n)
-	{
-		if(validAddress(n)) acc -= mem[(int) n];
-	}
+	void S(long n) {if(validAddress(n)) acc -= mem[(int) n];}
 
 	/**
 	 * Copy the number in storage location n into the multiplier register.
 	 *
 	 * @param n
 	 */
-	void H(int n)
-	{
-		if(validAddress(n)) mult = mem[n];
-	}
+	void H(int n) {if(validAddress(n)) mult = mem[n];}
 
 	/**
 	 * Multiply the number in storage location n by the number in the multiplier register and add the product into the
@@ -253,10 +238,7 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void V(int n)
-	{
-		if(validAddress(n)) A(mem[n] * mult);
-	}
+	void V(int n) {if(validAddress(n)) A(mem[n] * mult);}
 
 	/**
 	 * Multiply the number in storage location n by the number in the multiplier register and subtract the product from
@@ -264,10 +246,7 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void N(int n)
-	{
-		if(validAddress(n)) S(mem[n] * mult);
-	}
+	void N(int n) {if(validAddress(n)) S(mem[n] * mult);}
 
 	/**
 	 * Transfer the contents of the accumulator to storage location n and clear the accumulator.
@@ -288,10 +267,7 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void U(int n)
-	{
-		if(validAddress(n)) mem[n] = acc;
-	}
+	void U(int n) {if(validAddress(n)) mem[n] = acc;}
 
 	/**
 	 * Collate [logical AND] the number in storage location n with the number in the multiplier register and add the
@@ -299,30 +275,21 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void C(int n)
-	{
-		if(validAddress(n)) A(mem[n] & mult);
-	}
+	void C(int n) {if(validAddress(n)) A(mem[n] & mult);}
 
 	/**
 	 * Shift the number in the accumulator n places to the right.
 	 *
 	 * @param n
 	 */
-	void R(int n)
-	{
-		acc >>= n;
-	}
+	void R(int n) {acc >>= n;}
 
 	/**
 	 * Shift the number in the accumulator n places to the left.
 	 *
 	 * @param n
 	 */
-	void L(int n)
-	{
-		acc <<= n;
-	}
+	void L(int n) {acc <<= n;}
 
 	/**
 	 * If the sign of the accumulator is positive, jump to location n; otherwise proceed serially.
@@ -333,10 +300,8 @@ public final class EDSAC
 	{
 		if(validAddress(n))
 		{
-			if (acc >= 0l)
-				headPos = n;
-			else if (headPos != 1023)
-				headPos++;
+			if (acc >= 0l) headPos = n;
+			else if (headPos != 1023) headPos++;
 		}
 	}
 
@@ -349,10 +314,8 @@ public final class EDSAC
 	{
 		if(validAddress(n))
 		{
-			if (acc < 0l)
-				headPos = n;
-			else if (headPos != 1023)
-				headPos++;
+			if (acc < 0l) headPos = n;
+			else if (headPos != 1023) headPos++;
 		}
 	}
 
@@ -361,30 +324,21 @@ public final class EDSAC
 	 *
 	 * @param n
 	 */
-	void I(int n)
-	{
-		if(validAddress(n)) mem[n] = 0l;
-	}
+	void I(int n) {if(validAddress(n)) mem[n] = 0l;}
 
 	/**
 	 * Print the character represented by the most significant 5 bits of storage location n.
 	 *
 	 * @param n
 	 */
-	void O(int n)
-	{
-		if(validAddress(n)) out.println(mem[n]);
-	}
+	void O(int n) {if(validAddress(n)) out.println(mem[n]);}
 
 	/**
 	 * Read the last character output for verification.
 	 *
 	 * @param n
 	 */
-	void F(int n)
-	{
-		if(validAddress(n)) mem[n] = 0l;
-	}
+	void F(int n) {if(validAddress(n)) mem[n] = 0l;}
 
 	//############################################################################
 	//####################                                    ####################

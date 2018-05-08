@@ -214,24 +214,12 @@ public final class EDSAC
 	 */
 	void A(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		acc += mem[n];
+		if(validAddress(n)) acc += mem[n];
 	}
 
 	void A(long n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		acc += mem[(int) n];
+		if(validAddress(n)) acc += mem[(int) n];
 	}
 
 	/**
@@ -241,23 +229,12 @@ public final class EDSAC
 	 */
 	void S(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-		acc -= mem[n];
+		if(validAddress(n)) acc -= mem[n];
 	}
 
 	void S(long n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		acc -= mem[(int) n];
+		if(validAddress(n)) acc -= mem[(int) n];
 	}
 
 	/**
@@ -267,13 +244,7 @@ public final class EDSAC
 	 */
 	void H(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		mult = mem[n];
+		if(validAddress(n)) mult = mem[n];
 	}
 
 	/**
@@ -284,13 +255,7 @@ public final class EDSAC
 	 */
 	void V(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		A(mem[n] * mult);
+		if(validAddress(n)) A(mem[n] * mult);
 	}
 
 	/**
@@ -301,13 +266,7 @@ public final class EDSAC
 	 */
 	void N(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		S(mem[n] * mult);
+		if(validAddress(n)) S(mem[n] * mult);
 	}
 
 	/**
@@ -317,14 +276,11 @@ public final class EDSAC
 	 */
 	void T(int n)
 	{
-		if (n < 0 || n > 1023)
+		if(validAddress(n))
 		{
-			out.println("Address out of bounds :" + n);
-			return;
+			mem[n] = acc;
+			acc = 0l;
 		}
-
-		mem[n] = acc;
-		acc = 0l;
 	}
 
 	/**
@@ -334,13 +290,7 @@ public final class EDSAC
 	 */
 	void U(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		mem[n] = acc;
+		if(validAddress(n)) mem[n] = acc;
 	}
 
 	/**
@@ -351,13 +301,7 @@ public final class EDSAC
 	 */
 	void C(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		A(mem[n] & mult);
+		if(validAddress(n)) A(mem[n] & mult);
 	}
 
 	/**
@@ -387,16 +331,13 @@ public final class EDSAC
 	 */
 	void E(int n)
 	{
-		if (n < 0 || n > 1023)
+		if(validAddress(n))
 		{
-			out.println("Address out of bounds :" + n);
-			return;
+			if (acc >= 0l)
+				headPos = n;
+			else if (headPos != 1023)
+				headPos++;
 		}
-
-		if (acc >= 0l)
-			headPos = n;
-		else if (headPos != 1023)
-			headPos++;
 	}
 
 	/**
@@ -406,16 +347,13 @@ public final class EDSAC
 	 */
 	void G(int n)
 	{
-		if (n < 0 || n > 1023)
+		if(validAddress(n))
 		{
-			out.println("Address out of bounds :" + n);
-			return;
+			if (acc < 0l)
+				headPos = n;
+			else if (headPos != 1023)
+				headPos++;
 		}
-
-		if (acc < 0l)
-			headPos = n;
-		else if (headPos != 1023)
-			headPos++;
 	}
 
 	/**
@@ -425,13 +363,7 @@ public final class EDSAC
 	 */
 	void I(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		mem[n] = 0l;
+		if(validAddress(n)) mem[n] = 0l;
 	}
 
 	/**
@@ -441,13 +373,7 @@ public final class EDSAC
 	 */
 	void O(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		out.println(mem[n]);
+		if(validAddress(n)) out.println(mem[n]);
 	}
 
 	/**
@@ -457,13 +383,7 @@ public final class EDSAC
 	 */
 	void F(int n)
 	{
-		if (n < 0 || n > 1023)
-		{
-			out.println("Address out of bounds :" + n);
-			return;
-		}
-
-		mem[n] = 0l;
+		if(validAddress(n)) mem[n] = 0l;
 	}
 
 	//############################################################################

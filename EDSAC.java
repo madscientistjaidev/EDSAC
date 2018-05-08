@@ -532,7 +532,7 @@ public final class EDSAC
 				sm(inst);
 				break;
 				
-			case "smr":
+			case "sr":
 				sr(inst);
 				break;
 

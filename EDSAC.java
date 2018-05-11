@@ -571,6 +571,15 @@ public final class EDSAC
 		for (int i = start; i <= end; i++)
 			out.println("\t" + i + " : " + mem[i]);
 	}
+	
+	/**
+	 * Exits simulator.
+	 */
+	void ex()
+	{
+		out.println("Exiting...");
+		System.exit(0);
+	}
 
 	/**
 	 * Prints help

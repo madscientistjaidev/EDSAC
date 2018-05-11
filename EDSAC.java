@@ -547,13 +547,13 @@ public final class EDSAC
 			return;
 		}
 				
-		if (start < 0 || start > 1023)
+		if (!validAddress(start))
 		{
 			out.println("Address out of bounds :" + start);
 			return;
 		}
 		
-		if (end < 0 || end > 1023)
+		if (!validAddress(end))
 		{
 			out.println("Address out of bounds :" + end);
 			return;

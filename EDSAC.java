@@ -429,8 +429,8 @@ public final class EDSAC
 	void cm()
 	{
 		mem = new long[MEM_SIZE];
-		for (int i = 0; i < MEM_SIZE; i++)
-			mem[i] = 0l;
+		
+		for (int i = 0; i < MEM_SIZE; i++) mem[i] = 0l;
 	}
 
 	/**
@@ -480,10 +480,9 @@ public final class EDSAC
 			writer.write(op);
 			writer.flush();
 			writer.close();
-		} catch (IOException e)
-		{
-			out.println("Could not create file.");
 		}
+		
+		catch (IOException e) {out.println("Could not create file.");}
 	}
 
 	/**
@@ -503,10 +502,8 @@ public final class EDSAC
 		else
 		{
 			int loc = 0;
-			try
-			{
-				loc = Integer.parseInt(inst[1]);
-			}
+			
+			try {loc = Integer.parseInt(inst[1]);}
 			
 			catch(NumberFormatException e)
 			{
@@ -532,10 +529,7 @@ public final class EDSAC
 
 		int start = 0;
 
-		try
-		{
-			start = Integer.parseInt(inst[1]);
-		}
+		try {start = Integer.parseInt(inst[1]);}
 		
 		catch (NumberFormatException e)
 		{
@@ -545,10 +539,7 @@ public final class EDSAC
 		
 		int end = 0;
 
-		try
-		{
-			end = Integer.parseInt(inst[2]);
-		}
+		try {end = Integer.parseInt(inst[2]);}
 		
 		catch (NumberFormatException e)
 		{
@@ -635,10 +626,9 @@ public final class EDSAC
 
 		Scanner memReader;
 
-		try
-		{
-			memReader = new Scanner(memFile);
-		} catch (FileNotFoundException e)
+		try {memReader = new Scanner(memFile);}
+		
+		catch (FileNotFoundException e)
 		{
 			out.println("Could not open file.");
 			return;
@@ -651,12 +641,11 @@ public final class EDSAC
 		{
 			line = memReader.nextLine();
 
-			if (line.charAt(0) == '#')
-				continue;
+			if (line.charAt(0) == '#') continue;
 
 			memLoc = line.split(" ");
-			if (memLoc.length == 2)
-				mem[Integer.parseInt(memLoc[0])] = Long.parseLong(memLoc[1]);
+			
+			if (memLoc.length == 2) mem[Integer.parseInt(memLoc[0])] = Long.parseLong(memLoc[1]);
 		}
 	}
 
@@ -684,10 +673,9 @@ public final class EDSAC
 
 		Scanner progReader;
 
-		try
-		{
-			progReader = new Scanner(progFile);
-		} catch (FileNotFoundException e)
+		try {progReader = new Scanner(progFile);}
+		
+		catch (FileNotFoundException e)
 		{
 			out.println("Could not open file.");
 			return;
@@ -700,14 +688,11 @@ public final class EDSAC
 		{
 			line = progReader.nextLine();
 
-			if (line.length() == 0)
-				continue;
-			if (line.charAt(0) == '#')
-				continue;
+			if (line.length() == 0) continue;
+			if (line.charAt(0) == '#') continue;
 
 			memLoc = line.split(" ");
-			if (memLoc.length != 0)
-				prg.add(line);
+			if (memLoc.length != 0) prg.add(line);
 		}
 	}
 
@@ -738,10 +723,7 @@ public final class EDSAC
 			return;
 		}
 
-		prg.forEach((String i) ->
-		{
-			instHandler(i.split(" "));
-		});
+		prg.forEach((String i) -> {instHandler(i.split(" "));});
 	}
 
 	/**
@@ -755,10 +737,7 @@ public final class EDSAC
 			return;
 		}
 
-		prg.forEach((String i) ->
-		{
-			instHandler(i.split(" "));
-		});
+		prg.forEach((String i) -> {instHandler(i.split(" "));});
 	}
 	
 	/**
@@ -774,10 +753,8 @@ public final class EDSAC
 		}
 		
 		int val = 0;
-		try
-		{
-			val = Integer.parseInt(inst[2]);
-		}
+		
+		try {val = Integer.parseInt(inst[2]);}
 
 		catch(NumberFormatException e)
 		{
@@ -786,10 +763,8 @@ public final class EDSAC
 		}
 
 		int loc = 0;
-		try
-		{
-			loc = Integer.parseInt(inst[1]);
-		}
+		
+		try {loc = Integer.parseInt(inst[1]);}
 
 		catch(NumberFormatException e)
 		{
@@ -813,10 +788,8 @@ public final class EDSAC
 		}
 		
 		int val = 0;
-		try
-		{
-			val = Integer.parseInt(inst[2]);
-		}
+		
+		try {val = Integer.parseInt(inst[2]);}
 
 		catch(NumberFormatException e)
 		{
@@ -824,13 +797,10 @@ public final class EDSAC
 			return;
 		}
 		
-		if(inst[1]=="a")
-			acc = val;
+		if(inst[1]=="a") acc = val;
 		
-		else if(inst[1]=="m")
-			mult = val;
+		else if(inst[1]=="m") mult = val;
 		
-		else
-			out.println("Undefined register: " + inst[1]);
+		else out.println("Undefined register: " + inst[1]);
 	}
 }

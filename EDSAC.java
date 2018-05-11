@@ -377,8 +377,8 @@ public final class EDSAC
 				er(inst);
 				break;
 			case "ex":
-				out.println("Exiting...");
-				System.exit(0);
+				ex();
+				break;
 			case "he":
 				he();
 				break;

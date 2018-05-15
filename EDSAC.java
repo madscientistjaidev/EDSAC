@@ -387,7 +387,8 @@ public final class EDSAC
 			case 2:
 				switch(inst[0].trim())
 				{
-					
+					default:
+						out.println("Unknown command:" + inst[0]);
 				}
 				
 				break;
@@ -395,10 +396,14 @@ public final class EDSAC
 			case 3:
 				switch(inst[0].trim())
 				{
-					
+					default:
+						out.println("Unknown command:" + inst[0]);
 				}
 				
 				break;
+				
+			default:
+				out.println("Unknown command:" + inst[0]);
 		}
 		
 		switch (inst[0])

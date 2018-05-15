@@ -533,8 +533,8 @@ public final class EDSAC
 			return;
 		}
 
-		if(inst[1]=="a") out.println("\tAcc : " + acc);
-		else if(inst[1]=="m") out.println("\tAcc : " + mult);
+		if("a".equals(inst[1])) out.println("\tAcc : " + acc);
+		else if("m".equals(inst[1])) out.println("\tAcc : " + mult);
 		else
 		{
 			int loc = 0;
@@ -833,10 +833,19 @@ public final class EDSAC
 			return;
 		}
 		
-		if(inst[1]=="a") acc = val;
+		if(null == inst[1]) out.println("Undefined register: " + inst[1]);
 		
-		else if(inst[1]=="m") mult = val;
-		
-		else out.println("Undefined register: " + inst[1]);
+		else switch (inst[1])
+		{
+			case "a":
+				acc = val;
+				break;
+			case "m":
+				mult = val;
+				break;
+			default:
+				out.println("Undefined register: " + inst[1]);
+				break;
+		}
 	}
 }

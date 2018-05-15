@@ -354,6 +354,33 @@ public final class EDSAC
 	{
 		String[] inst = input.split(" ");
 
+		switch(inst.length)
+		{
+			case 1:
+				switch(inst[0].trim())
+				{
+					
+				}
+				
+				break;
+				
+			case 2:
+				switch(inst[0].trim())
+				{
+					
+				}
+				
+				break;
+				
+			case 3:
+				switch(inst[0].trim())
+				{
+					
+				}
+				
+				break;
+		}
+		
 		switch (inst[0])
 		{
 			case "ce":

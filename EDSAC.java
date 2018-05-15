@@ -359,7 +359,27 @@ public final class EDSAC
 			case 1:
 				switch(inst[0].trim())
 				{
-					
+					case "ce":
+						ce();
+						break;
+					case "cm":
+						cm();
+						break;
+					case "cp":
+						cp();
+						break;
+					case "ex":
+						ex();
+						break;
+					case "he":
+						he();
+						break;
+					//out.println("\tli\t\t\t\tShow license information");
+					case "rp":
+						rp();
+						break;
+					default:
+						out.println("Unknown command:" + inst[0]);
 				}
 				
 				break;
@@ -383,15 +403,7 @@ public final class EDSAC
 		
 		switch (inst[0])
 		{
-			case "ce":
-				ce();
-				break;
-			case "cm":
-				cm();
-				break;
-			case "cp":
-				cp();
-				break;
+			
 			//case "de" : de(inst);   break;
 			case "dm":
 				dm(inst);
@@ -403,13 +415,7 @@ public final class EDSAC
 			case "er":
 				er(inst);
 				break;
-			case "ex":
-				ex();
-				break;
-			case "he":
-				he();
-				break;
-			//out.println("\tli\t\t\t\tShow license information");
+			
 			case "lm":
 				lm(inst);
 				break;
@@ -424,9 +430,7 @@ public final class EDSAC
 			case "rc":
 				rc(inst);
 				break;
-			case "rp":
-				rp();
-				break;
+			
 			//out.println("\trs\t\t\tRun script");
 			//out.println("\tsc <filename>\t\tLoad script from file");
 			case "sm":

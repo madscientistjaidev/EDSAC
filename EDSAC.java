@@ -378,6 +378,7 @@ public final class EDSAC
 					case "rp":
 						rp();
 						break;
+					//out.println("\trs\t\t\tRun script");
 					default:
 						out.println("Unknown command:" + inst[0]);
 				}
@@ -387,6 +388,30 @@ public final class EDSAC
 			case 2:
 				switch(inst[0].trim())
 				{
+					//case "de" : de(inst);   break;
+					case "dm":
+						dm(inst);
+						break;
+					//out.println("\tee\t\t\tExamine execution trace");
+					case "el":
+						el(inst);
+						break;
+					case "lm":
+						lm(inst);
+						break;
+					case "lp":
+						lp(inst);
+						break;
+					//out.println("\tlt <filename>\t\tLoad tape from file");
+					//out.println("\tpb <string>\t\tPush button");
+					case "pr":
+						pr(inst);
+						break;
+					case "rc":
+						rc(inst);
+						break;			
+					//out.println("\tsc <filename>\t\tLoad script from file");
+					
 					default:
 						out.println("Unknown command:" + inst[0]);
 				}
@@ -396,56 +421,21 @@ public final class EDSAC
 			case 3:
 				switch(inst[0].trim())
 				{
+					case "er":
+						er(inst);
+						break;
+					case "sm":
+						sm(inst);
+						break;
+					case "sr":
+						sr(inst);
+						break;
 					default:
 						out.println("Unknown command:" + inst[0]);
 				}
 				
 				break;
 				
-			default:
-				out.println("Unknown command:" + inst[0]);
-		}
-		
-		switch (inst[0])
-		{
-			
-			//case "de" : de(inst);   break;
-			case "dm":
-				dm(inst);
-				break;
-			//out.println("\tee\t\t\tExamine execution trace");
-			case "el":
-				el(inst);
-				break;
-			case "er":
-				er(inst);
-				break;
-			
-			case "lm":
-				lm(inst);
-				break;
-			case "lp":
-				lp(inst);
-				break;
-			//out.println("\tlt <filename>\t\tLoad tape from file");
-			//out.println("\tpb <string>\t\tPush button");
-			case "pr":
-				pr(inst);
-				break;
-			case "rc":
-				rc(inst);
-				break;
-			
-			//out.println("\trs\t\t\tRun script");
-			//out.println("\tsc <filename>\t\tLoad script from file");
-			case "sm":
-				sm(inst);
-				break;
-				
-			case "sr":
-				sr(inst);
-				break;
-
 			default:
 				out.println("Unknown command:" + inst[0]);
 		}

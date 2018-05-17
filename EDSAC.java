@@ -47,7 +47,7 @@ public final class EDSAC
 	 */
 	ArrayList<String> prg;
 
-	boolean isRunning;
+	boolean active;
 
 	/**
 	 * Constructor to initialize data structures.
@@ -58,7 +58,7 @@ public final class EDSAC
 		cm();
 		ce();
 
-		isRunning = true;
+		active = true;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public final class EDSAC
 
 		out.println("Type he for help");
 
-		while (e.isRunning)
+		while (e.active)
 		{
 			out.print("\n" + e.prompt + ">");
 			input = sc.nextLine();

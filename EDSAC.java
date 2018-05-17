@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.System.out;
+import java.util.Arrays;
 
 /**
  *
@@ -438,7 +439,7 @@ public final class EDSAC
 				break;
 				
 			default:
-				out.println("Unknown command:" + inst[0]);
+				out.println("Unknown command or wrong number of arguments:" + Arrays.toString(inst));
 		}
 	}
 

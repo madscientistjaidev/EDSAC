@@ -526,21 +526,28 @@ public final class EDSAC
 			return;
 		}
 
-		if("a".equals(inst[1])) out.println("\tAcc : " + acc);
-		else if("m".equals(inst[1])) out.println("\tAcc : " + mult);
-		else
+		switch(inst[1])
 		{
-			int loc = 0;
+			case "a":
+				out.println("\tAcc : " + acc);
+				break;
+				
+			case "m":
+				out.println("\tAcc : " + mult);
+				break;
+				
+			default:
+				int loc = 0;
 			
-			try {loc = Integer.parseInt(inst[1]);}
-			
-			catch(NumberFormatException e)
-			{
-				out.println("Bad argument : " + inst[1]);
-				return;
-			}
-			
-			out.println("\t" + loc + " : " + mem[loc]);
+				try {loc = Integer.parseInt(inst[1]);}
+
+				catch(NumberFormatException e)
+				{
+					out.println("Bad argument : " + inst[1]);
+					return;
+				}
+
+				out.println("\t" + loc + " : " + mem[loc]);
 		}
 	}
 

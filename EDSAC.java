@@ -376,7 +376,9 @@ public final class EDSAC
 					case "he":
 						he();
 						break;
-					//out.println("\tli\t\t\t\tShow license information");
+					case "li":
+						li();
+						break;
 					case "rp":
 						rp();
 						break;

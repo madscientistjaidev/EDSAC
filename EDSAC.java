@@ -639,6 +639,27 @@ public final class EDSAC
 		out.println("\tsr <register> <value>\t\tSet value of register");
 	}
 
+	void li()
+	{
+		System.out.println("--------------------------------------------------------------------------------");
+		System.out.println("|                                                                              |");
+		System.out.println("|                                EDSAC Simulator                               |");
+		System.out.println("|                                 Version 18.05                                |");
+		System.out.println("|                                                                              |");
+		System.out.println("--------------------------------------------------------------------------------");
+		System.out.println("|                                                                              |");
+		System.out.println("|               Created by Jaidev Raakrishna at Drexel University              |");
+		System.out.println("|               Based upon work done by the EDSAC Replica Project              |");
+		System.out.println("|                                                                              |");
+		System.out.println("--------------------------------------------------------------------------------");
+		System.out.println("|                                                                              |");
+		System.out.println("|     This software is released free of any license or restriction. Its use    |");
+		System.out.println("|     is meant to be purely academic or recreational. It is not fit for use    |");
+		System.out.println("|     in production. It can be modified and/or distributed freely. Any bug     |");
+		System.out.println("|     reports, feature requests, or suggestions for improvement are welcome.   |");
+		System.out.println("|                                                                              |");
+		System.out.println("--------------------------------------------------------------------------------");
+	}
 	/**
 	 * Load memory from file
 	 *

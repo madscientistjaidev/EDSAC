@@ -405,6 +405,7 @@ public final class EDSAC
 						lp(inst);
 						break;
 					//out.println("\tlt <filename>\t\tLoad tape from file");
+					//out.println("\tma <command>\t\t\tSee detailed description of command");
 					//out.println("\tpb <string>\t\tPush button");
 					case "pr":
 						pr(inst);
@@ -621,6 +622,7 @@ public final class EDSAC
 		out.println("\tlp <filename>\t\t\tLoad program from file");
 		out.println("\tls <filename>\t\t\tLoad script from file");
 		out.println("\tlt <filename>\t\t\tLoad tape from file");
+		out.println("\tma <command>\t\t\tSee detailed description of command");
 		out.println("\tpb <string>\t\t\tPush button");
 		out.println("\tpr <string>\t\t\tSet Prompt");
 		out.println("\trc <command>\t\t\tRun command");

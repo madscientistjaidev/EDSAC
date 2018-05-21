@@ -383,6 +383,9 @@ public final class EDSAC
 						rp();
 						break;
 					//out.println("\trs\t\t\tRun script");
+					case "ve":
+						ve();
+						break;
 					default:
 						out.println("Unknown command:" + inst[0]);
 				}
@@ -626,7 +629,7 @@ public final class EDSAC
 		out.println("\ter <start> <end>\t\tExamine range of locations");
 		out.println("\tex\t\t\t\tExit simulator");
 		out.println("\the\t\t\t\tPrint Help");
-		out.println("\tli\t\t\t\tShow license information");
+		out.println("\tli\t\t\t\tDisplays license information");
 		out.println("\tlm <filename>\t\t\tLoad memory map from file");
 		out.println("\tlp <filename>\t\t\tLoad program from file");
 		out.println("\tls <filename>\t\t\tLoad script from file");
@@ -639,6 +642,7 @@ public final class EDSAC
 		out.println("\trs\t\t\t\tRun script");
 		out.println("\tsm <location> <value>\t\tSet value of location");
 		out.println("\tsr <register> <value>\t\tSet value of register");
+		out.println("\tli\t\t\t\tDisplays version information");
 	}
 
 	/**

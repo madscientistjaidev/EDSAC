@@ -872,4 +872,11 @@ public final class EDSAC
 				break;
 		}
 	}
+	
+	void ve()
+	{
+		System.out.println("EDSAC Simulator");
+		System.out.println("Version 18.05");
+		System.out.println("Built with Java 10");
+	}
 }

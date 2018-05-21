@@ -762,6 +762,113 @@ public final class EDSAC
 			if (memLoc.length != 0) prg.add(line);
 		}
 	}
+	
+	void ma(String inst[])
+	{
+		switch(inst[1])
+		{
+			case "ce":
+				
+				break;
+				
+			case "cm":
+				
+				break;
+				
+			case "cp":
+				
+				break;
+				
+			case "cs":
+				
+				break;
+				
+			case "ex":
+				
+				break;
+				
+			case "he":
+				
+				break;
+				
+			case "li":
+				
+				break;
+				
+			case "rp":
+				
+				break;
+				
+			case "rs":
+				
+				break;
+				
+			case "ve":
+				
+				break;
+				
+			case "de":
+				
+				break;
+				
+			case "dm":
+				
+				break;
+				
+			case "ee":
+				
+				break;
+				
+			case "el":
+				
+				break;
+			case "lm":
+				
+				break;
+			case "lp":
+				
+				break;
+			
+			case "lt":
+				
+				break;
+				
+			case "ma":
+				
+				break;
+				
+			case "pb":
+				
+				break;
+				
+			case "pr":
+				
+				break;
+				
+			case "rc":
+				
+				break;
+				
+			case "sc":
+				
+				break;
+				
+			case "er":
+				
+				break;
+				
+			case "sm":
+				
+				break;
+				
+			case "sr":
+				
+				break;
+				
+			default:
+				out.println("Unknown command:" + inst[0]);
+		}
+	}
 
 	/**
 	 * Set Prompt.

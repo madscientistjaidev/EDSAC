@@ -641,6 +641,9 @@ public final class EDSAC
 		out.println("\tsr <register> <value>\t\tSet value of register");
 	}
 
+	/**
+	 * Displays license information.
+	 */
 	void li()
 	{
 		System.out.println("--------------------------------------------------------------------------------");
@@ -873,6 +876,9 @@ public final class EDSAC
 		}
 	}
 	
+	/**
+	 * Displays version information.
+	 */
 	void ve()
 	{
 		System.out.println("EDSAC Simulator");

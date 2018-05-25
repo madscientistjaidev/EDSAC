@@ -418,7 +418,7 @@ public final class EDSAC
 					case "rc":
 						rc(inst);
 						break;			
-					//out.println("\tsc <filename>\t\tLoad script from file");
+					//out.println("\tls <filename>\t\tLoad script from file");
 					
 					default:
 						out.println("Unknown command:" + inst[0]);
@@ -503,13 +503,7 @@ public final class EDSAC
 
 			String op = "";
 
-			for (int i = 0; i < MEM_SIZE; i++)
-			{
-				op += i;
-				op += " ";
-				op += mem[i];
-				op += "\n";
-			}
+			for (int i = 0; i < MEM_SIZE; i++) op += i + ":" + mem[i] + "\n";
 
 			writer.write(op);
 			writer.flush();
@@ -642,7 +636,7 @@ public final class EDSAC
 		out.println("\trs\t\t\t\tRun script");
 		out.println("\tsm <location> <value>\t\tSet value of location");
 		out.println("\tsr <register> <value>\t\tSet value of register");
-		out.println("\tli\t\t\t\tDisplays version information");
+		out.println("\tve\t\t\t\tDisplays version information");
 	}
 
 	/**
@@ -768,101 +762,103 @@ public final class EDSAC
 		switch(inst[1])
 		{
 			case "ce":
-				
+				out.println("\tce\t\t\t\tClear execution trace");
 				break;
 				
 			case "cm":
-				
+				out.println("\tcm\t\t\t\tClear memory map");
 				break;
 				
 			case "cp":
-				
+				out.println("\tcp\t\t\t\tClear program");
 				break;
 				
 			case "cs":
-				
+				out.println("\tcs\t\t\t\tClear script");
 				break;
 				
 			case "ex":
-				
+				out.println("\tex\t\t\t\tExit simulator");
 				break;
 				
 			case "he":
-				
+				out.println("\the\t\t\t\tPrint Help");
 				break;
 				
 			case "li":
-				
+				out.println("\tli\t\t\t\tDisplays license information");
 				break;
 				
 			case "rp":
-				
+				out.println("\trp\t\t\t\tRun program");
 				break;
 				
 			case "rs":
-				
+				out.println("\trs\t\t\t\tRun script");
 				break;
 				
 			case "ve":
-				
+				out.println("\tve\t\t\t\tDisplays version information");
 				break;
 				
 			case "de":
-				
+				out.println("\tde <filename>\t\t\tDump execution trace to file");
 				break;
 				
 			case "dm":
-				
+				out.println("\tdm <filename>\t\t\tDump memory to file");
 				break;
 				
 			case "ee":
-				
+				out.println("\tee\t\t\t\tExamine execution trace");
 				break;
 				
 			case "el":
-				
+				out.println("\tel <location>\t\t\tExamine memory location");
 				break;
+				
 			case "lm":
-				
+				out.println("\tlm <filename>\t\t\tLoad memory map from file");
 				break;
-			case "lp":
 				
+			case "lp":
+				out.println("\tlp <filename>\t\t\tLoad program from file");
 				break;
 			
 			case "lt":
-				
+				out.println("\tlt <filename>\t\t\tLoad tape from file");
 				break;
 				
 			case "ma":
-				
+				out.println("\tma <command>\t\t\tSee detailed description of command");
 				break;
 				
 			case "pb":
-				
+				out.println("\tpb <string>\t\t\tPush button");
 				break;
 				
 			case "pr":
-				
+				out.println("\tpr <string>\t\t\tSet Prompt");
 				break;
 				
 			case "rc":
-				
+				out.println("\trc <command>\t\t\tRun command");
 				break;
 				
-			case "sc":
-				
+			case "ls":
+				out.println("\tls <filename>\t\t\tLoad script from file");
 				break;
 				
 			case "er":
-				
+				out.println("\ter <start> <end>\t\tExamine range of locations");
 				break;
 				
 			case "sm":
-				
+				out.println("\tsm <location> <value>\t\tSet value of location");
 				break;
 				
 			case "sr":
-				
+				out.println("\tsr <register> <value>\t\tSet value of register");
 				break;
 				
 			default:

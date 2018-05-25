@@ -704,7 +704,7 @@ public final class EDSAC
 
 			if (line.charAt(0) == '#') continue;
 
-			memLoc = line.split(" ");
+			memLoc = line.split(":");
 			
 			if (memLoc.length == 2) mem[Integer.parseInt(memLoc[0])] = Long.parseLong(memLoc[1]);
 		}

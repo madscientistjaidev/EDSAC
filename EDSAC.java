@@ -410,7 +410,9 @@ public final class EDSAC
 						lp(inst);
 						break;
 					//out.println("\tlt <filename>\t\tLoad tape from file");
-					//out.println("\tma <command>\t\t\tSee detailed description of command");
+					case "ma":
+						ma(inst);
+						break;
 					//out.println("\tpb <string>\t\tPush button");
 					case "pr":
 						pr(inst);
@@ -532,7 +534,7 @@ public final class EDSAC
 				break;
 				
 			case "m":
-				out.println("\tAcc : " + mult);
+				out.println("\tMult : " + mult);
 				break;
 				
 			default:
@@ -767,7 +769,7 @@ public final class EDSAC
 				
 			case "cm":
 				out.println("\tcm\t\t\t\tClear memory map");
-				out.println("\t\t\t\t\t\tSets all memory locations to 0");
+				out.println("\t\t\t\t\tSets all memory locations to 0");
 				break;
 				
 			case "cp":
@@ -808,7 +810,7 @@ public final class EDSAC
 				
 			case "dm":
 				out.println("\tdm <filename>\t\t\tDump memory to file");
-				out.println("\t\t\t\t\t\tThe file has one memory location and its value on each line in the format address:value");
+				out.println("\t\t\t\t\tThe file has one memory location and its value on each line in the format address:value");
 				break;
 				
 			case "ee":
@@ -821,8 +823,8 @@ public final class EDSAC
 				
 			case "lm":
 				out.println("\tlm <filename>\t\t\tLoad memory map from file");
-				out.println("\t\t\t\t\t\tThe file must have one memory location and its value on each line in the format address:value");
-				out.println("\t\t\t\t\t\tBlank lines and comments beginning with # are allowed");
+				out.println("\t\t\t\t\tThe file must have one memory location and its value on each line in the format address:value");
+				out.println("\t\t\t\t\tBlank lines and comments beginning with # are allowed");
 				break;
 				
 			case "lp":
@@ -855,7 +857,7 @@ public final class EDSAC
 				
 			case "er":
 				out.println("\ter <start> <end>\t\tExamine range of locations");
-				out.println("\t\t\t\t\t\tAddresses and values are displayed in the format address:value with one on each line");
+				out.println("\t\t\t\t\tAddresses and values are displayed in the format address:value with one on each line");
 				break;
 				
 			case "sm":
@@ -864,7 +866,7 @@ public final class EDSAC
 				
 			case "sr":
 				out.println("\tsr <register> <value>\t\tSet value of register");
-				out.println("\t\t\t\t\t\tRegisted shoud be a for accumulator and m for multiplier");
+				out.println("\t\t\t\t\tRegisted shoud be a for accumulator and m for multiplier");
 				break;
 				
 			default:

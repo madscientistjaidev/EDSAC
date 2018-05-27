@@ -63,6 +63,7 @@ public final class EDSAC
 		cp();
 		cm();
 		ce();
+		cs();
 
 		active = true;
 	}
@@ -374,7 +375,9 @@ public final class EDSAC
 					case "cp":
 						cp();
 						break;
-					//out.println("\tcs\t\t\t\tClear script");
+					case "cs":
+						cs();
+						break;
 					case "ex":
 						ex();
 						break;

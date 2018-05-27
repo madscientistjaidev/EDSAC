@@ -47,6 +47,11 @@ public final class EDSAC
 	 * Holds program
 	 */
 	ArrayList<String> prg;
+	
+	/**
+	 * Holds script
+	 */
+	ArrayList<String> script;
 
 	boolean active;
 
@@ -409,6 +414,7 @@ public final class EDSAC
 					case "lp":
 						lp(inst);
 						break;
+					//out.println("\tls <filename>\t\tLoad script from file");
 					//out.println("\tlt <filename>\t\tLoad tape from file");
 					case "ma":
 						ma(inst);
@@ -420,7 +426,6 @@ public final class EDSAC
 					case "rc":
 						rc(inst);
 						break;			
-					//out.println("\tls <filename>\t\tLoad script from file");
 					
 					default:
 						out.println("Unknown command:" + inst[0]);

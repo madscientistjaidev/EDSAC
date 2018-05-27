@@ -622,7 +622,7 @@ public final class EDSAC
 	void ex()
 	{
 		out.println("Exiting...");
-		System.exit(0);
+		active=false;
 	}
 
 	/**

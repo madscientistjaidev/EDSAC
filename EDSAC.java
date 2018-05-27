@@ -481,6 +481,14 @@ public final class EDSAC
 	{
 		prg = new ArrayList<>();
 	}
+	
+	/**
+	 * Clear Script
+	 */
+	void cs()
+	{
+		script = new ArrayList<>();
+	}
 
 	/**
 	 * Dump memory to file.

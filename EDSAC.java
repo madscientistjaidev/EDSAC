@@ -483,7 +483,7 @@ public final class EDSAC
 	{
 		mem = new long[MEM_SIZE];
 		
-		for (int i = 0; i < MEM_SIZE; i++) mem[i] = 0l;
+		for (int i=0; i<MEM_SIZE; i++) mem[i] = 0l;
 	}
 
 	/**
@@ -530,7 +530,7 @@ public final class EDSAC
 
 			String op = "";
 
-			for (int i = 0; i < MEM_SIZE; i++) op += i + ":" + mem[i] + "\n";
+			for (int i=0; i<MEM_SIZE; i++) op += i + ":" + mem[i] + "\n";
 
 			writer.write(op);
 			writer.flush();
@@ -621,7 +621,7 @@ public final class EDSAC
 			return;
 		}
 
-		for (int i = start; i <= end; i++)
+		for (int i=start; i<=end; i++)
 			out.println("\t" + i + " : " + mem[i]);
 	}
 	
@@ -631,7 +631,7 @@ public final class EDSAC
 	void ex()
 	{
 		out.println("Exiting...");
-		active=false;
+		active = false;
 	}
 
 	/**
@@ -891,7 +891,7 @@ public final class EDSAC
 				
 			case "sr":
 				out.println("\tsr <register> <value>\t\tSet value of register");
-				out.println("\t\t\t\t\tRegisted shoud be a for accumulator and m for multiplier");
+				out.println("\t\t\t\t\tRegister shoud be a for accumulator and m for multiplier");
 				break;
 				
 			default:
@@ -1022,7 +1022,7 @@ public final class EDSAC
 	void ve()
 	{
 		System.out.println("EDSAC Simulator");
-		System.out.println("Version 18.05");
+		System.out.println("Version 18.06");
 		System.out.println("Built with Java 10");
 	}
 }

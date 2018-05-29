@@ -674,7 +674,7 @@ public final class EDSAC
 		System.out.println("--------------------------------------------------------------------------------");
 		System.out.println("|                                                                              |");
 		System.out.println("|                                EDSAC Simulator                               |");
-		System.out.println("|                                 Version 18.05                                |");
+		System.out.println("|                                 Version 18.06                                |");
 		System.out.println("|                                                                              |");
 		System.out.println("--------------------------------------------------------------------------------");
 		System.out.println("|                                                                              |");

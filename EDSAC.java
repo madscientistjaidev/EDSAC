@@ -8,7 +8,13 @@ import static java.lang.System.out;
 import java.util.Arrays;
 
 /**
- *
+ * EDSAC Simulator
+ * Created by Jaidev Raakrishna at Drexel University
+ * Based upon work done by the EDSAC Replica Project
+ * 
+ * This software is released free of any license or restriction. It can be modified and/or distributed freely.
+ * Its use is meant to be purely academic or recreational. It is not fit for use in production.
+ * Any bug reports, feature requests, or suggestions for improvement are welcome.  
  * @author Mad Scientist
  */
 public final class EDSAC
@@ -53,6 +59,9 @@ public final class EDSAC
 	 */
 	ArrayList<String> script;
 
+	/**
+	 * Controls execution loop of simulator.
+	 */
 	boolean active;
 
 	/**

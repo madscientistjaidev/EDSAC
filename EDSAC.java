@@ -803,6 +803,7 @@ public final class EDSAC
 				
 			case "cs":
 				out.println("\tcs\t\t\t\tClear script");
+				out.println("\t\t\t\t\tCurrently inactive");
 				break;
 				
 			case "ex":
@@ -823,6 +824,7 @@ public final class EDSAC
 				
 			case "rs":
 				out.println("\trs\t\t\t\tRun script");
+				out.println("\t\t\t\t\tCurrently inactive");
 				break;
 				
 			case "ve":
@@ -831,6 +833,7 @@ public final class EDSAC
 				
 			case "de":
 				out.println("\tde <filename>\t\t\tDump execution trace to file");
+				out.println("\t\t\t\t\tCurrently inactive");
 				break;
 				
 			case "dm":
@@ -858,6 +861,7 @@ public final class EDSAC
 			
 			case "lt":
 				out.println("\tlt <filename>\t\t\tLoad tape from file");
+				out.println("\t\t\t\t\tCurrently inactive");
 				break;
 				
 			case "ma":
@@ -878,6 +882,7 @@ public final class EDSAC
 				
 			case "ls":
 				out.println("\tls <filename>\t\t\tLoad script from file");
+				out.println("\t\t\t\t\tCurrently inactive");
 				break;
 				
 			case "er":
